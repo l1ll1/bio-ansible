@@ -11,6 +11,7 @@
 
 - name: Ensure freebayes bin directory exists
   file: dest="{{ source_dir }}/freebayes-{{ version }}/bin" state=directory
+  tags: freebayes
 
 - name: build freebayes {{ version }}
   #shell: cd {{ source_dir }}/freebayes-{{ version }}; make -j {{ threads }}
